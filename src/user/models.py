@@ -34,3 +34,9 @@ class User(AbstractBaseUser, PermissionsMixin):
     objects = UserManager()
 
     USERNAME_FIELD = 'email'
+
+
+class TrustPerson(models.Model):
+    name = models.CharField(max_length=255)
+    contact_phone = models.CharField(max_length=255, blank=False)
+    town = models.CharField(max_length=255)
